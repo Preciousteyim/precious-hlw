@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form</title>
+    <link rel="stylesheet" href="form.css">
+</head>
+<body>
+    <div class="container">
+        <form action="" method="post" id="form">
+        <h1>Register</h1>
+        <div class="input-group">
+            <label for="name" style="font-size: large;">Name</label>
+            <input type="text" id="name" placeholder="enter your name" required><br>
+         
+            <label style="font-size: large;">Email</label>
+            <input type="email" placeholder="enter your email" name="email" id="email" ><br>
+
+            <label for="password" style="font-size: large;">Password</label>
+            <input type="password" id="password" placeholder="enter your password" required><br><br>
+
+            <p style="font-size: large;">click here<a href="password">Password forgoten</a></p><br>
+            <button type="submit" id="submit">Register</button>
+            <button><a href="sign in" style="text-decoration: none;">Sign in</a></button>  
+
+        </div>
+        </form>
+    </div>
+    <script>
+        function myFunction() {
+            var x, text;
+
+            // Get the value of the input type with id="email"//
+
+            x = document.getElementById("email").value;
+
+            /* If x is Not having @gmail.com*/
+            if x = equalTo("@gmail.com") {
+                text = "please enter an email address";
+            }else{
+               text = "valid email";
+            }
+
+            document.getElementById("email").innerHTML = text;
+        }
+    </script>
+</body>
+</html>
